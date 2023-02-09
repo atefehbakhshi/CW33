@@ -1,0 +1,32 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  height: 50px;
+  overflow: hidden;
+}
+.task-title {
+  padding: 0.5rem;
+}
+.task-buttons {
+  padding: 0.5rem;
+  border: none;
+  height: 100%;
+}
+.buttons-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 100px;
+}
+
+.buttons-container button:first-child {
+  background-color: rgb(1 192 161);
+  color: white;
+  font-size: 1.5rem;
+  width: 50%;
+}
+.buttons-container button:last-child {
+  background-color: rgb(252 123 70);
+}

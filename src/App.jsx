@@ -1,6 +1,7 @@
 import "./App.css";
 import AddTask from "./components/AddTask";
 import FilterTask from "./components/FilterTask";
+import ListContainer from "./components/listContainer/ListContainer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <AddTask />
         <FilterTask />
       </div>
+      <ListContainer />
     </div>
   );
 }
