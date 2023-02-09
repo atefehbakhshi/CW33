@@ -1,0 +1,9 @@
+.filter-select {
+  background-color: white;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  color: rgb(252 123 70);
+}
