@@ -1,6 +1,7 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import styles from "./AddTask.module.css";
 import axios from "axios";
+import { TaskContext } from "../context/TaskContext";
 
 const BASE_URL = "http://localhost:3000/tasks";
 
@@ -18,6 +19,7 @@ const sendData = () => {
 };
 
 const AddTask = () => {
+  const { setNewTask } = useContext(TaskContext);
   const inputTask = useRef(null);
 
   const getTask = () => {
@@ -27,6 +29,7 @@ const AddTask = () => {
   const addTolist = () => {
     newTask.id = Math.random();
     sendData();
+    setNewTask((prev) => !prev);
   };
 
   return (

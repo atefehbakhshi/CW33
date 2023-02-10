@@ -6,10 +6,13 @@ const BASE_URL = "http://localhost:3000/tasks";
 export const TaskContext = createContext({
   taskList: [],
   setTaskList: () => {},
+  setNewTask: () => {},
 });
 
 const TaskContextProvider = ({ children }) => {
   const [taskList, setTaskList] = useState([]);
+  const [newTask, setNewTask] = useState(false);
+
   useEffect(() => {
     axios
       .get(BASE_URL)
@@ -17,10 +20,10 @@ const TaskContextProvider = ({ children }) => {
         setTaskList(response.data);
       })
       .catch((err) => console.log(err));
-  }, [taskList]);
+  }, [newTask]);
 
   return (
-    <TaskContext.Provider value={{ taskList, setTaskList }}>
+    <TaskContext.Provider value={{ taskList, setTaskList, setNewTask }}>
       {children}
     </TaskContext.Provider>
   );

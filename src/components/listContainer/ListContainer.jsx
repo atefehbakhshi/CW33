@@ -9,14 +9,18 @@ export default function ListContainer() {
 
   return (
     <div className={styles["list-container"]}>
-      {taskList.map((task) => (
-        <ListItem
-          title={task.title}
-          key={task.id}
-          id={task.id}
-          checked={task.checked}
-        />
-      ))}
+      {taskList.length === 0 ? (
+        <p>Loading...</p>
+      ) : (
+        taskList.map((task) => (
+          <ListItem
+            title={task.title}
+            key={task.id}
+            id={task.id}
+            checked={task.checked}
+          />
+        ))
+      )}
     </div>
   );
 }
