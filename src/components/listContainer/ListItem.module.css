@@ -22,11 +22,11 @@
 }
 
 .buttons-container button:first-child {
-  background-color: rgb(1 192 161);
   color: white;
   font-size: 1.5rem;
   width: 50%;
 }
 .buttons-container button:last-child {
   background-color: rgb(252 123 70);
+  width: 50%;
 }
